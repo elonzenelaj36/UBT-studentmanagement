@@ -98,3 +98,27 @@ body {
 }
 .about h2 { margin-top: 0; color: var(--ubt-blue); }
 .about p { color: var(--muted); }
+
+/* Testimonials */
+.testimonials {
+  max-width: 1080px;
+  margin: 20px auto 40px;
+  padding: 0 24px;
+}
+.testimonials h2 { color: var(--ubt-blue); }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.card img { width: 100%; height: 160px; object-fit: cover; }
+.card-body { padding: 16px; }
+.card-body h3 { margin: 0 0 8px; font-size: 16px; color: var(--ubt-dark); }
+.card-body p { margin: 0; color: var(--muted); }
