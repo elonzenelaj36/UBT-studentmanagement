@@ -1,4 +1,4 @@
-
+// -------Ruajtja e te dhenave ne local storage---------
 
 const form = document.getElementById("registerForm"); // burimi i te dhenave
 

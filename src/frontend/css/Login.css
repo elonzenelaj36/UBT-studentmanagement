@@ -1,4 +1,4 @@
- body {
+ /* body {
             font-family: Arial, sans-serif;
             background: #f2f2f2;
             display: flex;
@@ -48,4 +48,115 @@
 
         .login-container button:hover {
             background: #45a049;
-        }
+        } */
+:root {
+  --ubt-blue: #004080;
+  --ubt-dark: #1f1f1f;
+  --ubt-light: #f5f7fb;
+  --ubt-accent: #e53935;
+  --text: #333;
+  --muted: #666;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+
+
+  background-image: url('../fotot/STUDENTI1.png'); 
+  background-size: cover;    
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh; 
+}
+#erresuar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.451);
+    z-index: -1;
+}
+
+
+
+/* Header */
+.ubt-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+.logo img { height: 40px; display: block; }
+.ubt-nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; gap: 20px; align-items: center;
+}
+.ubt-nav a {
+  text-decoration: none;
+  color: var(--ubt-dark);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.ubt-nav a:hover { background: var(--ubt-light); }
+.ubt-nav a#loginLink { color: var(--ubt-blue); }  
+
+
+
+/*-----------------------------------------------------------------*/
+
+.login-container{
+  display: flex;
+  justify-content: center;
+  margin-top:100px
+
+}
+
+
+
+form{
+  background: #ffffffa0;
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 300px;
+}
+form h2{
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--ubt-dark);
+}
+form label{
+  font-size: 14px;
+  margin-bottom: 5px;
+  
+  color: var(--muted);
+}
+form input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button{
+  width: 100%;
+  padding: 10px;
+  background: var(--ubt-blue);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
