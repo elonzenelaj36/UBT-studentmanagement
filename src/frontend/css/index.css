@@ -87,7 +87,7 @@ body {
   font-weight: 600;
 }
 
-/* About */
+/* About----Rreth nesh */
 .about {
   max-width: 980px;
   margin: 40px auto;
@@ -97,7 +97,7 @@ body {
   padding: 24px;
 }
 .about h2 { margin-top: 0; color: var(--ubt-blue); }
-.about p { color: var(--muted); }
+
 
 /* Testimonials */
 .testimonials {
@@ -123,6 +123,9 @@ body {
 .card-body h3 { margin: 0 0 8px; font-size: 16px; color: var(--ubt-dark); }
 .card-body p { margin: 0; color: var(--muted); }
 
+
+
+
 .contact {
   max-width: 980px;
   margin: 20px auto 60px;
@@ -131,27 +134,42 @@ body {
   box-shadow: var(--shadow);
   padding: 24px;
 }
-.contact h2 { color: var(--ubt-blue); margin-top: 0; }
-.contact-form { margin-top: 10px; }
+.contact h2 { 
+  color: var(--ubt-blue); 
+  margin-top: 0; 
+}
+.contact-form { 
+  margin-top: 10px; 
+}
 .form-row {
   display: grid;
   gap: 8px;
   margin-bottom: 12px;
 }
-label { font-weight: 600; }
+label { 
+  font-weight: 600; 
+}
 input, textarea {
   padding: 10px;
   border: 1px solid #dcdcdc;
   border-radius: 10px;
   font-size: 14px;
 }
-textarea { min-height: 120px; resize: vertical; }
-.form-feedback {
-  margin-top: 8px;
-  font-size: 13px;
-  color: var(--muted);
+textarea { 
+  min-height: 120px; 
 }
-
+.btnsecondary {
+  background: var(--ubt-blue);
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btnsecondary:hover {
+  background: #003366;
+}
 /* Footer Styling */
 footer {
     background-color: #004080;

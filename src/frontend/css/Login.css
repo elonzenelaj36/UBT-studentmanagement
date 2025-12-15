@@ -1,54 +1,3 @@
- /* body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-
-        .login-container {
-            background: white;
-            padding: 25px 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 300px;
-        }
-
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .login-container label {
-            font-size: 14px;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .login-container input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background: #4CAF50;
-            border: none;
-            color: white;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .login-container button:hover {
-            background: #45a049;
-        } */
 :root {
   --ubt-blue: #004080;
   --ubt-dark: #1f1f1f;
@@ -110,7 +59,9 @@ body {
   border-radius: 8px;
 }
 .ubt-nav a:hover { background: var(--ubt-light); }
-.ubt-nav a#loginLink { color: var(--ubt-blue); }  
+#loginLink { 
+  color: var(--ubt-blue);
+}  
 
 
 
