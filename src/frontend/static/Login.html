@@ -26,22 +26,22 @@
   </div>
 
 
+<div class="login-container">
+    <form id="loginForm">
+        <h2>Log in</h2>
 
- <div class="login-container">
-   
-        <form id="loginForm">
-           <h2>Log in</h2>
-            <label for="username">Username</label>
-            
-            <input type="text" id="username" placeholder="Enter a username" required>
-            
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter a username" required>
+        <small class="error" id="usernameError"></small>
 
-            <label for="password">Password</label>
-            
-            <input type="password" id="password" placeholder="Enter password" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+        <small class="error" id="passwordError"></small>
 
-            <button type="submit">Log in</button>
-        </form>
- </div>
+        <button type="submit">Log in</button>
+        <h1 id="success" style="Color: green;"></h1>
+    </form>
+</div>
+<script src="../js/login.js"></script>
 </body>
 </html>
