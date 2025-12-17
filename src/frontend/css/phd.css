@@ -1,20 +1,10 @@
-:root {
-  --ubt-blue: #004080;
-  --ubt-dark: #1f1f1f;
-  --ubt-light: #f5f7fb;
-  --ubt-accent: #e53935;
-  --text: #333;
-  --muted: #666;
-  --radius: 12px;
-  --shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
 
-* { box-sizing: border-box; }
+/* Reset bazë */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  background: var(--ubt-light);
+  background: #f5f7fb;
 }
 
 /* Header */
@@ -43,3 +33,59 @@ body {
 }
 .ubt-nav a:hover { background: var(--ubt-light); }
 .ubt-nav a.active { color: var(--ubt-blue); }
+
+/* Hero */
+.page-hero {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+}
+.page-hero h1 {
+  color: #004080;
+  margin-bottom: 12px;
+}
+.page-hero p {
+  margin-bottom: 20px;
+  
+}
+.page-hero img {
+  display: block; /*me vendos ne mes vetem horizontalisht-"display:block;" dhe "margin: 0 auto;"*/
+  margin: 0 auto;
+  width: 70%;
+  height: 400px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+/* Info section */
+.info {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.info h2 {
+  color: #004080;
+  margin-top: 0;
+}
+.info ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.info li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.ubt-footer {
+  background: #004080; /* blu e UBT */
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}
