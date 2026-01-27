@@ -14,15 +14,20 @@ form.addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        if(data.success){
-            // Login successful
+        if(data.success && data.user.role == "admin"){
+
             successMsg.style.color = 'green';
-            successMsg.textContent = "Welcome " + data.student.emri + "!";
-            console.log("User data:", data.student);
-        } else {
-            // Login failed
+            successMsg.textContent = "Welcome  Admin! " + data.user.emri + "!";
+            console.log("User data:", data.user);
+            return;
+        } else if(data.success){
+                         successMsg.style.color = 'green';
+            successMsg.textContent = "Welcome  student! " + data.user.emri + "!";
+            console.log("User data:", data.user);
+        }else{
+        
             successMsg.style.color = 'red';
-            successMsg.textContent = data.message || "Login failed";
+            successMsg.textContent = data.message || "Login failed"
         }
     })
     .catch(err => {

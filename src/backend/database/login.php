@@ -5,7 +5,7 @@ function getUserByEmail(string $password, string $email): ?array {
  $con = getConnection();
 
     $stmt = $con->prepare(
-        "SELECT emri, mbiemri, email
+        "SELECT emri, mbiemri, email, role as \"role\"
          FROM users 
          WHERE email = ? and userpassword = ? 
          LIMIT 1"
