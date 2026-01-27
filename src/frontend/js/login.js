@@ -8,7 +8,7 @@ form.addEventListener('submit', function(e) {
     // Grab the form data automatically
     const formData = new FormData(form);
 
-    fetch('/UBT-studentmanagement/src/backend/api/login.php', {
+    fetch('/UBT-studentmanagement/src/backend/api/UserController.php', {
         method: 'POST',
         body: formData
     })
