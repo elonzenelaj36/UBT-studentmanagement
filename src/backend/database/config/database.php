@@ -1,11 +1,25 @@
 <?php
-  
- function getConnection(){
-      $con = mysqli_connect("localhost", "root", "", "ubt");
+class Database {
+    private $host = "localhost";
+    private $dbname = "Projekti";
+    private $username = "root";
+    private $password = "";
+    private $conn;
 
-   if(!$con){
-    return;
-   }
-    return $con;
- }
-?>
+    public function __construct() {
+        try {
+            $this->conn = new PDO(
+                "mysql:host={$this->host};dbname={$this->dbname}",
+                $this->username,
+                $this->password
+            );
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die("Lidhja deshtoi: " . $e->getMessage());
+        }
+    }
+
+    public function getConnection() {
+        return $this->conn;
+    }
+}
