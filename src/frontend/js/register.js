@@ -48,12 +48,12 @@ if (!nameRegex.test(surname.value.trim())) {
         isValid = false;
     }
 
-   /* if (!passwordRegex.test(password.value)) {
+   if (!passwordRegex.test(password.value)) {
         errors.password.textContent =
             "Fjalëkalimi duhet të ketë të paktën 8 karaktere dhe të përfshijë shkronja të mëdha, shkronja të vogla, numra dhe një karakter special.";
         password.classList.add("error-input");
         isValid = false;
-    } */
+    } 
 
     if (!isValid) return;
 

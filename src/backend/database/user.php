@@ -36,7 +36,6 @@ public function register($name, $surname, $email, $password) {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user['userpassword'])) {
-        // remove password before returning
         unset($user['userpassword']);
         return $user;
     }
