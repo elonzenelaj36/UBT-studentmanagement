@@ -1,23 +1,26 @@
 <?php
+
 class Database {
     private $host = "localhost";
-    private $dbname = "ubt";
-    private $username = "root";
-    private $password = "";
-    private $conn;
+    private $db = "auth_system";
+    private $user = "root";
+    private $pass = "";
+    public $conn;
 
-    public function __construct() {
-        $this->conn = new PDO(
-            "mysql:host={$this->host};dbname={$this->dbname}",
-            $this->username,
-            $this->password
-        );
-        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
+    public function connect() {
+        try {
+            $this->conn = new PDO(
+                "mysql:host=$this->host;dbname=$this->db;charset=utf8",
+                $this->user,
+                $this->pass
+            );
 
-    public function getConnection() {
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        } catch(PDOException $e) {
+            die("DB Error: " . $e->getMessage());
+        }
+
         return $this->conn;
     }
 }
-
-?>
