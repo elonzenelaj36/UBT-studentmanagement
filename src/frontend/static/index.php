@@ -53,7 +53,47 @@ session_start();
 
 
 
+<!-- ------------------------------------------------->
+ 
+ <?php
+include_once '../../backend/Database.php';
 
+$db = new Database();
+$conn = $db->getConnection();
+
+$query = "SELECT * FROM news ORDER BY created_at DESC";
+$stmt = $conn->prepare($query);
+$stmt->execute();
+
+$news = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<section class="news">
+    <div class="news-wrapper">
+        
+
+        <div class="news-slider">
+            <?php foreach($news as $n): ?>
+                <div class="slide">
+                    <img src="../fotot/ubtcampus.jpg" alt="<?= htmlspecialchars($n['title']) ?>"/>
+                    <div class="slide-content">
+                        <h3><?= $n['title'] ?></h3>
+                        <p><?= substr($n['content'], 0, 350) ?>...</p>
+                        <span class="date"><?= $n['created_at'] ?></span>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="slider-nav">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+
+<!-------------------------------------------------------->
 
 
 
